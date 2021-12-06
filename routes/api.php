@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('provider_a', [HotelController::class, 'provider_a']);
+Route::get('provider_b', [HotelController::class, 'provider_b']);
+Route::get('all_data', [HotelController::class, 'all_data']);
